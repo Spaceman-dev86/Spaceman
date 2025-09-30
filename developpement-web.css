@@ -1,0 +1,5 @@
+.hero--static { background: radial-gradient(800px 600px at 20% -20%, rgba(52,28,68,0.35), transparent 60%); min-height: 40vh; display: grid; place-items: center; }
+.services .service { padding: 0; overflow: hidden; }
+.service-inner { padding: 22px; }
+.service-icon { font-size: 34px; margin-bottom: 10px; }
+.services .service:hover { transform: translateY(-3px); box-shadow: var(--shadow-2); }

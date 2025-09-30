@@ -1,0 +1,4 @@
+.hero--static { background: radial-gradient(800px 600px at 30% -20%, rgba(83,61,96,0.25), transparent 60%); min-height: 40vh; display: grid; place-items: center; }
+#contact-form .btn { margin-top: 8px; }
+aside .socials a { width: 40px; height: 40px; border-radius: 50%; display: inline-grid; place-items: center; border: 1px solid rgba(219,213,221,0.16); color: var(--color-text); text-decoration: none; }
+aside .socials a:hover { background: var(--gradient-accent); border-color: transparent; }

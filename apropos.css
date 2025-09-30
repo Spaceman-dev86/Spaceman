@@ -1,0 +1,28 @@
+.hero--static { background: radial-gradient(800px 600px at 80% -20%, rgba(83,61,96,0.25), transparent 60%); min-height: 40vh; display: grid; place-items: center; }
+.crew .card h3 { margin-top: 0; }
+
+/* Valeurs & Engagements */
+.values {
+  background: var(--gradient-accent, linear-gradient(135deg, #341C44 0%, #533d60 40%, #73607e 100%));
+  color: #fff;
+  padding: 64px 0;
+}
+.values-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: center;
+}
+.values-text .section-title { color: #fff; margin-bottom: 8px; }
+.values-text .section-subtitle { color: #dbd5dd; margin-bottom: 20px; }
+.values-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.values-list li { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius-sm, 10px); padding: 16px; }
+.values-list h3 { margin: 0 0 6px 0; color: #fff; }
+.values-list p { margin: 0; color: #f1ecf4; }
+.values-media { display: grid; place-items: center; }
+.values-media img { width: 100%; height: auto; max-width: 520px; filter: drop-shadow(0 10px 30px rgba(0,0,0,0.25)); }
+
+@media (max-width: 960px) {
+  .values-inner { grid-template-columns: 1fr; }
+  .values-media { order: -1; }
+}
