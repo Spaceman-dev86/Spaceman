@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{TITLE}} À propos — Spaceman</title>
+  <title>À propos — Spaceman</title>
   <meta name="description" content="{{META_DESCRIPTION}} Découvrez l'histoire, la mission et l'équipage Spaceman: votre agence marketing & web.">
   <meta name="robots" content="index, follow">
   <link rel="icon" href="logo/logo.png">
@@ -32,54 +32,89 @@
   </header>
 
   <main id="main">
-    <section class="section hero hero--static">
-      <div class="hero-overlay"></div>
-      <div class="container hero-inner">
-        <h1 class="section-title">À propos de Spaceman</h1>
-        <p class="section-subtitle">Notre histoire, notre mission et notre équipage. Direction: l'orbite de vos objectifs.</p>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container grid grid-2">
-        <article class="card reveal" style="padding:24px;">
-          <h2>Histoire</h2>
-          <p>Spaceman est née de l'union de deux passions: le marketing et le développement web. Depuis notre premier décollage, nous guidons des entreprises de toutes tailles dans leur conquête d'audiences nouvelles.</p>
-          <p>Notre carburant: la créativité, la data et la rigueur opérationnelle. Notre boussole: vos résultats.</p>
-        </article>
-        <article class="card reveal" style="padding:24px;">
-          <h2>Mission</h2>
-          <p>Nous concevons des vaisseaux digitaux performants et des plans de vol marketing pour atteindre vos destinations clés: visibilité, acquisition, conversion et fidélisation.</p>
-          <ul>
-            <li>Décollage: audit, stratégie et cadrage.</li>
-            <li>Orbite: exécution, optimisations continues.</li>
-            <li>Atterrissage: résultats mesurables et durables.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section crew">
-      <div class="container grid grid-2">
-        <div class="card reveal" style="padding:24px;">
-          <h3>Thomas — Commandant de Mission</h3>
-          <p>Expert en marketing digital: SEO, SEA, plan média, opérations. Il pilote vos campagnes et ajuste la trajectoire pour atteindre la bonne orbite.</p>
+    <!-- Section Histoire -->
+    <section class="section story-section">
+      <div class="container">
+        <!-- Titre principal de la page -->
+        <div class="page-hero-header reveal">
+          <h1 class="section-title" style="text-align: center;">À propos de Spaceman</h1>
+          <p class="section-subtitle" style="text-align: center; max-width: 800px; margin: 0 auto;">Notre histoire, notre mission et notre équipage. Direction: l'orbite de vos objectifs.</p>
         </div>
-        <div class="card reveal" style="padding:24px;">
-          <h3>Rémi — Ingénieur de Bord</h3>
-          <p>Développeur web: sites vitrines, e-commerce, hébergement et maintenance. Il assemble votre fusée et optimise chaque module.</p>
+
+        <div class="story-header reveal">
+          <h2 class="section-title" style="text-align: center;">Les Fondateurs</h2>
+          <p class="section-subtitle" style="text-align: center; max-width: 800px; margin: 0 auto;">Une alliance stratégique entre expertise technique et vision marketing pour une prestation premium.</p>
+        </div>
+
+      <!-- Histoire professionnelle -->
+      <div class="story-intro reveal">
+        <p>Après des années à évoluer dans leurs domaines respectifs, Rémi et Thomas ont identifié une lacune récurrente sur le marché : <strong>le cloisonnement entre développement web et stratégie marketing.</strong></p>
+        <p>Trop souvent, les entreprises jonglent entre plusieurs prestataires, perdant en cohérence, en réactivité et en efficacité. Un site web performant sans stratégie marketing reste invisible. Une campagne marketing brillante sans infrastructure technique solide ne convertit pas.</p>
+        <p><strong>Le constat était clair : leurs expertises complémentaires pouvaient répondre à ce besoin.</strong></p>
+        <p>Spaceman est né de cette vision : offrir une prestation intégrée et premium où chaque projet bénéficie d'une double expertise. Développement web de pointe piloté par Rémi, stratégie marketing affinée orchestrée par Thomas. Une synergie qui garantit cohérence, performance et résultats mesurables.</p>
+      </div>
+
+      <!-- Profils en zigzag -->
+      <div class="story-profiles">
+        <!-- Rémi -->
+        <article class="profile-card profile-left reveal">
+          <div class="profile-image">
+            <img src="images/jet.png" alt="Rémi" loading="lazy">
+            <div class="profile-glow profile-glow-blue"></div>
+          </div>
+          <div class="profile-content">
+            <div class="profile-badge">Développeur Web</div>
+            <h3>Rémi</h3>
+            <p class="profile-subtitle">L'Architecte du Code</p>
+            <p>Ingénieur de formation, Rémi a toujours été fasciné par la manière dont la technologie peut transformer des idées en réalité. Après plusieurs années dans l'ingénierie, il a décidé de se reconvertir dans le développement web, convaincu que c'est là que se joue l'avenir.</p>
+            <p><strong>Sa philosophie :</strong> "Un site web n'est pas qu'une vitrine, c'est une expérience. Chaque ligne de code doit servir l'utilisateur."</p>
+            <div class="profile-skills">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">UX/UI</span>
+              <span class="skill-tag">Performance</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Thomas -->
+        <article class="profile-card profile-right reveal">
+          <div class="profile-content">
+            <div class="profile-badge">Directeur Marketing</div>
+            <h3>Thomas</h3>
+            <p class="profile-subtitle">Le Stratège Créatif</p>
+            <p>Formé au marketing digital, Thomas a gravi les échelons pour devenir directeur marketing il y a 5 ans. Son expertise : transformer des budgets en résultats mesurables et créer des campagnes qui marquent les esprits.</p>
+            <p><strong>Sa conviction :</strong> "Le marketing ne doit plus être une dépense, mais un investissement stratégique. Chaque euro doit générer de la valeur."</p>
+            <div class="profile-skills">
+              <span class="skill-tag">Stratégie 360°</span>
+              <span class="skill-tag">Growth Marketing</span>
+              <span class="skill-tag">Analytics</span>
+              <span class="skill-tag">Branding</span>
+            </div>
+          </div>
+          <div class="profile-image">
+            <img src="images/ballon.png" alt="Thomas" loading="lazy">
+            <div class="profile-glow profile-glow-purple"></div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Mission commune -->
+      <div class="story-mission reveal">
+        <div class="mission-content">
+          <h3>Notre Mission Commune</h3>
+          <p>Spaceman est né d'une conviction partagée : <strong>les PME méritent les mêmes outils et stratégies que les grandes entreprises.</strong></p>
+          <p>Trop souvent, nous avons vu des entrepreneurs brillants freinés par des sites web obsolètes ou des campagnes marketing inefficaces. Nous avons créé Spaceman pour changer cela.</p>
+          <p>Ensemble, nous combinons technologie de pointe et stratégie marketing affinée pour propulser votre entreprise vers de nouveaux sommets. Pas de jargon, pas de promesses vides — juste des résultats concrets et mesurables.</p>
+        </div>
+        <div class="mission-cta">
+          <p style="font-size: 20px; font-weight: 700; color: #341C44; margin-bottom: 20px;">Prêt à embarquer avec nous ?</p>
+          <a class="btn primary" href="contact.html" style="font-size: 18px; padding: 16px 40px;">Démarrer mon projet</a>
         </div>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="container center">
-        <a class="btn" href="developpement-web.html">Voir nos services Web</a>
-        <a class="btn primary" href="marketing.html">Explorer le Marketing 360°</a>
-      </div>
-    </section>
-  </main>
-
+    </div>
+  </section>
+  
   <!-- Valeurs & Engagements -->
   <section class="values" aria-labelledby="values-title">
     <div class="container values-inner">
@@ -110,57 +145,91 @@
       </figure>
     </div>
   </section>
+  </main>
 
   <footer>
     <div class="footer-first-line">
-      <div class="footer-text">
-        <h2>Embarquer notre fusée, direction la lune!</h2>
-      </div>
-      <div class="footer-image">
-        <img src="images/footer.png" alt="Footer" />
-      </div>
+        <div class="footer-text">
+            <h2>Embarquer notre fusée, direction la lune!</h2>
+        </div>
+        <div class="footer-image">
+            <img src="images/footer.png" alt="Footer" />
+        </div>
     </div>
-
+    
     <div class="footer-second-line">
-      <div class="footer-column">
-        <h2>Nos réseaux</h2>
-        <div class="footer-divider"></div>
-        <ul>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="https://X.com/">
-              <img src="images/twitter.png" alt="X" /> X
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/">
-              <img src="images/instagram.png" alt="Instagram" /> Instagram
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
-        <h2>Nos services</h2>
-        <div class="footer-divider"></div>
-        <ul>
-          <li><a href="marketing.html">Marketing local</a></li>
-          <li><a href="developpement-web.html">Développement web</a></li>
-          <li><a href="#">Conditions générales</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-column">
+        <div class="footer-column">
+            <h2>Nos réseaux</h2>
+            <div class="footer-divider"></div>
+            <ul>
+                <li>
+                    <a href="https://wa.me/33685139774" target="_blank" rel="noopener">
+                        <img src="images/whatsapp.png" alt="whatsapp" /> Whatsapp
+                    </a>
+                </li>
+                <li>
+                    <a href="https://X.com/">
+                        <img src="images/linkedin.png" alt="Linkedin" /> Linkedin
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/">
+                        <img src="images/insta.png" alt="Instagram" /> Instagram
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h2>Nos services</h2>
+            <div class="footer-divider"></div>
+            <ul>
+                <li><a href="digital.html">Marketing local</a></li>
+                <li><a href="developpement-web.html">Développement web</a></li>
+                <li><a href="blog.html">Actualités</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-column">
+            <h2>Contact</h2>
+            <div class="footer-divider"></div>
+            <ul>
+                <li><a href="contact.html">Nous contacter</a></li>
+                <li>+33 6 85 13 97 74</li>
+                <li>spacemanlocalmarketing@gmail.com</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Section Contact Mobile (visible uniquement en dessous de 641px) -->
+    <div class="footer-contact-mobile">
         <h2>Contact</h2>
         <div class="footer-divider"></div>
-        <ul>
-          <li><a href="contact.html">Nous contacter</a></li>
-          <li>+33 6 85 13 97 74</li>
-          <li>spacemanlocalmarketing@gmail.com</li>
+        <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+                <a href="https://wa.me/33685139774" target="_blank" rel="noopener" class="footer-contact-icon">
+                    <img src="images/whatsapp.png" alt="WhatsApp" />
+                </a>
+                <div class="footer-contact-separator"></div>
+                <a href="contact.html" class="footer-contact-text">Nous contacter</a>
+            </li>
+            <li class="footer-contact-item">
+                <a href="https://X.com/" target="_blank" rel="noopener" class="footer-contact-icon">
+                    <img src="images/linkedin.png" alt="LinkedIn" />
+                </a>
+                <div class="footer-contact-separator"></div>
+                <span class="footer-contact-text">+33 6 85 13 97 74</span>
+            </li>
+            <li class="footer-contact-item">
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-contact-icon">
+                    <img src="images/insta.png" alt="Instagram" />
+                </a>
+                <div class="footer-contact-separator"></div>
+                <span class="footer-contact-text">spacemanlocalmarketing@gmail.com</span>
+            </li>
         </ul>
-      </div>
     </div>
-  </footer>
+</footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();

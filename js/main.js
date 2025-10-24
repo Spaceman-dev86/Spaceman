@@ -263,3 +263,33 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 });
+
+// ========== ANIMATION FUSÉE FOOTER ==========
+(function() {
+  const footer = document.querySelector('footer');
+  const footerFirstLine = document.querySelector('.footer-first-line');
+  
+  if (!footer || !footerFirstLine) return;
+  
+  let hasAnimated = false;
+  
+  // Observer pour détecter quand le footer devient visible
+  const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting && !hasAnimated) {
+        hasAnimated = true;
+        
+        // Déclencher l'animation de la fusée ET afficher le contenu en même temps
+        footerFirstLine.classList.add('footer-rocket-animate');
+        footer.classList.add('footer-content-visible');
+        
+        // Arrêter d'observer après l'animation
+        footerObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2 // Déclencher quand 20% du footer est visible
+  });
+  
+  footerObserver.observe(footer);
+})();

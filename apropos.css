@@ -26,3 +26,387 @@
   .values-inner { grid-template-columns: 1fr; }
   .values-media { order: -1; }
 }
+
+/* ========== SECTION HISTOIRE ========== */
+/* Titre principal de la page dans story-section */
+.page-hero-header {
+  padding: 40px 0 60px;
+  margin-bottom: 100px;
+}
+
+.page-hero-header .section-title {
+  color: white;
+  font-size: 48px;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.page-hero-header .section-subtitle {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 20px;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .page-hero-header {
+    padding: 60px 0 40px;
+  }
+  
+  .page-hero-header .section-title {
+    font-size: 36px;
+  }
+  
+  .page-hero-header .section-subtitle {
+    font-size: 18px;
+  }
+}
+
+.story-section {
+  background-image: url('images/noir.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 100px 0;
+  position: relative;
+}
+
+.story-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.story-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.story-header {
+  margin-bottom: 60px;
+}
+
+.story-section .section-title {
+  color: white;
+}
+
+.story-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Introduction histoire */
+.story-intro {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  text-align: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.story-intro p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.story-intro strong {
+  color: #341C44;
+  font-size: 24px;
+  display: block;
+  margin: 30px 0;
+  font-style: italic;
+}
+
+/* Profils en zigzag */
+.story-profiles {
+  margin: 80px 0;
+}
+
+.profile-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+/* Rémi à gauche */
+.profile-left {
+  grid-template-columns: 400px 1fr;
+}
+
+/* Thomas à droite */
+.profile-right {
+  grid-template-columns: 1fr 400px;
+}
+
+/* Image avec effet glow */
+.profile-image {
+  position: relative;
+  animation: floatProfile 4s ease-in-out infinite;
+}
+
+.profile-image img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 50px rgba(52, 28, 68, 0.2));
+  position: relative;
+  z-index: 2;
+}
+
+.profile-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  border-radius: 50%;
+  animation: pulseGlow 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+.profile-glow-blue {
+  background: radial-gradient(circle, rgba(52, 152, 219, 0.2) 0%, transparent 70%);
+}
+
+.profile-glow-purple {
+  background: radial-gradient(circle, rgba(52, 28, 68, 0.2) 0%, transparent 70%);
+}
+
+@keyframes floatProfile {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+/* Contenu profil */
+.profile-content {
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  border: 3px solid #341C44;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.profile-content::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(135deg, #341C44 0%, #73607e 100%);
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.profile-card:hover .profile-content::before {
+  opacity: 1;
+}
+
+.profile-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #341C44 0%, #73607e 100%);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.profile-content h3 {
+  color: #341C44;
+  font-family: var(--font-heading);
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 8px;
+}
+
+.profile-subtitle {
+  color: #73607e;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.profile-content p {
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.profile-content strong {
+  color: #341C44;
+  font-weight: 700;
+}
+
+/* Tags compétences */
+.profile-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.skill-tag {
+  background: linear-gradient(135deg, rgba(52, 28, 68, 0.1) 0%, rgba(115, 96, 126, 0.1) 100%);
+  color: #341C44;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid rgba(52, 28, 68, 0.2);
+  transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+  background: linear-gradient(135deg, #341C44 0%, #73607e 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 28, 68, 0.3);
+}
+
+/* Mission commune */
+.story-mission {
+  max-width: 900px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.mission-content {
+  background: linear-gradient(135deg, #341C44 0%, #73607e 100%);
+  color: white;
+  padding: 60px 50px;
+  border-radius: 24px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 60px rgba(52, 28, 68, 0.3);
+}
+
+.mission-content h3 {
+  color: white;
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0 0 24px;
+}
+
+.mission-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  opacity: 0.95;
+}
+
+.mission-content strong {
+  color: white;
+  font-weight: 800;
+}
+
+.mission-cta {
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  border: 3px dashed #341C44;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .profile-card {
+    grid-template-columns: 1fr !important;
+    gap: 40px;
+    margin-bottom: 60px;
+  }
+  
+  .profile-left,
+  .profile-right {
+    grid-template-columns: 1fr !important;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Inverser l'ordre pour Thomas : photo avant texte */
+  .profile-right .profile-content {
+    order: 2;
+  }
+  
+  .profile-right .profile-image {
+    order: 1;
+  }
+  
+  .profile-image {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .story-section {
+    padding: 60px 0;
+  }
+  
+  .story-intro {
+    padding: 30px 20px;
+    margin-bottom: 60px;
+  }
+  
+  .story-intro strong {
+    font-size: 20px;
+  }
+  
+  .profile-content {
+    padding: 30px 20px;
+  }
+  
+  .profile-content h3 {
+    font-size: 28px;
+  }
+  
+  .profile-subtitle {
+    font-size: 18px;
+  }
+  
+  .mission-content {
+    padding: 40px 30px;
+  }
+  
+  .mission-content h3 {
+    font-size: 26px;
+  }
+  
+  .mission-cta {
+    padding: 30px 20px;
+  }
+}
