@@ -210,17 +210,19 @@
 .vertical-services-section .container {
   position: relative;
   z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .vertical-service-card {
   position: relative;
   background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
   border: 3px solid #341C44;
-  border-radius: 20px;
-  padding: 40px 30px;
-  margin-bottom: 40px;
+  border-radius: 16px;
+  padding: 30px 25px;
+  margin-bottom: 30px;
   overflow: visible;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease;
 }
 
@@ -253,16 +255,16 @@
 .vertical-service-header h3 {
   color: #341C44;
   font-family: var(--font-heading);
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 900;
   margin: 0;
 }
 
 .vertical-service-subtitle {
   color: #73607e;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   line-height: 1.5;
 }
 
@@ -274,11 +276,11 @@
 
 .vertical-service-list li {
   color: #000000;
-  padding: 12px 0;
+  padding: 10px 0;
   padding-left: 32px;
   position: relative;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.6;
 }
 
@@ -286,9 +288,10 @@
   content: '✓';
   position: absolute;
   left: 0;
+  top: 10px;
   color: #341C44;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   background: linear-gradient(135deg, #341C44 0%, #73607e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -316,7 +319,7 @@
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 280px;
+  width: 220px;
   z-index: 2;
   animation: floatBalloon 3s ease-in-out infinite;
 }
@@ -354,8 +357,12 @@
     background-attachment: scroll;
   }
   
+  .vertical-services-section .container {
+    max-width: 750px;
+  }
+  
   .vertical-service-card {
-    padding: 35px 25px;
+    padding: 28px 22px;
   }
   
   .vertical-service-content {
@@ -366,29 +373,100 @@
     display: none;
   }
   
-  .vertical-service-number {
-    font-size: 120px;
+  .vertical-service-header h3 {
+    font-size: 28px;
+  }
+  
+  .vertical-service-subtitle {
+    font-size: 15px;
+  }
+  
+  .vertical-service-list li {
+    font-size: 13px;
+    padding: 8px 0;
+    padding-left: 30px;
   }
 }
 
 @media (max-width: 768px) {
   .vertical-services-section {
-    padding: 40px 0;
+    padding: 35px 0;
+  }
+  
+  .vertical-services-section .container {
+    max-width: 500px;
+    padding: 0 20px;
   }
   
   .vertical-service-card {
-    padding: 30px 20px;
-    margin-bottom: 30px;
+    padding: 24px 18px;
+    margin-bottom: 25px;
+    border-radius: 12px;
   }
   
   .vertical-service-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 12px;
+    gap: 10px;
+    margin-bottom: 12px;
   }
   
   .vertical-service-header h3 {
-    font-size: 32px;
+    font-size: 24px;
+  }
+  
+  .vertical-service-subtitle {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  
+  .vertical-service-list li {
+    font-size: 13px;
+    padding: 7px 0;
+    padding-left: 28px;
+  }
+  
+  .vertical-service-note {
+    font-size: 12px;
+    padding: 12px;
+    margin: 16px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .vertical-services-section .container {
+    max-width: 400px;
+    padding: 0 15px;
+  }
+  
+  .vertical-service-card {
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+  
+  .vertical-service-header h3 {
+    font-size: 20px;
+  }
+  
+  .vertical-service-subtitle {
+    font-size: 13px;
+  }
+  
+  .vertical-service-list li {
+    font-size: 12px;
+    padding: 6px 0;
+    padding-left: 26px;
+  }
+  
+  .vertical-service-list li::before {
+    font-size: 14px;
+    top: 6px;
+  }
+  
+  .vertical-service-card .btn {
+    margin-top: 16px;
+    padding: 10px 20px;
+    font-size: 14px;
   }
 }
 
@@ -718,9 +796,11 @@
 
 /* CTA */
 .why-cta {
-  background: linear-gradient(135deg, rgba(52, 28, 68, 0.05) 0%, rgba(115, 96, 126, 0.05) 100%);
+  background: #ffffff;
+  border: 3px solid #341C44;
   border-radius: 20px;
   padding: 40px;
+  box-shadow: 0 10px 40px rgba(52, 28, 68, 0.15);
   border: 2px dashed #341C44;
 }
 
