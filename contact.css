@@ -144,6 +144,96 @@
 
 .row.two { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
 
+/* Button states */
+.btn.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.btn.loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+/* Success message */
+.success-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background: linear-gradient(135deg, #341C44 0%, #533d60 40%, #73607e 100%);
+  color: white;
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  text-align: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.success-message.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.success-message .checkmark {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(76, 175, 80, 0.2);
+  border: 3px solid #4CAF50;
+  margin: 0 auto 20px;
+  position: relative;
+  animation: checkmark-pop 0.4s ease-out;
+}
+
+.success-message .checkmark::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+@keyframes checkmark-pop {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.success-message h3 {
+  font-size: 1.5em;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.success-message p {
+  font-size: 1em;
+  margin: 0;
+  opacity: 0.9;
+}
+
 /* Responsive Contact Section */
 @media screen and (max-width: 1130px) {
   .contact-left {

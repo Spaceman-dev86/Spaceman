@@ -320,10 +320,10 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script>
     (function(){
-      // Configurez vos identifiants EmailJS ici (les mêmes que sur contact.html si déjà définis)
-      const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';
-      const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';
-      const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+      // Identifiants EmailJS configurés
+      const EMAILJS_PUBLIC_KEY = 'aFA8-A8wJNaXBy4Wo';
+      const EMAILJS_SERVICE_ID = 'service_l7yffac';
+      const EMAILJS_TEMPLATE_ID = 'template_66wbk3i';
 
       if (window.emailjs) {
         emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -331,8 +331,17 @@
 
       const form = document.getElementById('home-contact-form');
       if (form) {
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
+
         form.addEventListener('submit', async (e) => {
           e.preventDefault();
+          
+          // Désactiver le bouton et afficher le chargement
+          submitBtn.classList.add('loading');
+          submitBtn.textContent = 'Envoi en cours...';
+          submitBtn.disabled = true;
+          
           const data = {
             last_name: form.last_name.value,
             first_name: form.first_name.value,
@@ -340,15 +349,45 @@
             company: form.company.value,
             message: form.message.value
           };
+          
           try {
             await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data);
-            alert('Message envoyé ! Nous revenons vers vous très vite.');
+            
+            // Afficher le message de succès
+            showSuccessMessage();
             form.reset();
+            
           } catch (err) {
             console.error(err);
             alert("Une erreur est survenue. Merci de réessayer.");
+          } finally {
+            // Réactiver le bouton
+            submitBtn.classList.remove('loading');
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
           }
         });
+
+        function showSuccessMessage() {
+          // Créer le message de succès
+          const successDiv = document.createElement('div');
+          successDiv.className = 'success-message';
+          successDiv.innerHTML = `
+            <div class="checkmark"></div>
+            <h3>Message envoyé !</h3>
+            <p>Nous revenons vers vous très vite.</p>
+          `;
+          document.body.appendChild(successDiv);
+          
+          // Afficher avec animation
+          setTimeout(() => successDiv.classList.add('show'), 10);
+          
+          // Masquer après 3 secondes
+          setTimeout(() => {
+            successDiv.classList.remove('show');
+            setTimeout(() => successDiv.remove(), 300);
+          }, 3000);
+        }
       }
     })();
   </script>
