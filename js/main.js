@@ -129,6 +129,7 @@ const projectData = {
       subtitle: "Site Web",
       wallImage: "images/portfolio/transitio-wall.png",
       logoImage: "images/portfolio/transitio.png",
+      link: "https://www.transitioenergy.com/",
       tasks: [
           {
               title: "Développement web",
@@ -145,6 +146,7 @@ const projectData = {
       subtitle: "Application Web",
       wallImage: "images/portfolio/conciergerie-wall.png",
       logoImage: "images/portfolio/conciergerie.png",
+      link: "https://conciergerie-lechappee.com/",
       tasks: [
           {
               title: "Application web",
@@ -161,6 +163,7 @@ const projectData = {
       subtitle: "Identité Visuelle",
       wallImage: "images/portfolio/brebis-wall.png",
       logoImage: "images/portfolio/brebis.png",
+      link: "https://brebisbrigasque.fr/",
       tasks: [
           {
               title: "Création logo",
@@ -177,6 +180,7 @@ const projectData = {
       subtitle: "Portfolio Photographe",
       wallImage: "images/portfolio/web-designer-wall.png",
       logoImage: "images/portfolio/robbie-lens.png",
+      link: "https://openclassrooms-student-center.github.io/1603881-creez-votre-site-web-avec-html5-et-css3/index.html",
       tasks: [
           {
               title: "Site portfolio",
@@ -193,6 +197,7 @@ const projectData = {
       subtitle: "CV Interactif",
       wallImage: "images/portfolio/web-designer-wall.png",
       logoImage: "images/portfolio/web-designer.png",
+      link: "https://spaceman-dev86.github.io/Portfolio-R-mi-SARRO/index.html",
       tasks: [
           {
               title: "CV interactif",
@@ -222,6 +227,7 @@ function openPopup(projectId) {
               <div class="popup-content-left">
                   <h2>${project.subtitle}</h2>
                   <p>Découvrez les réalisations de ce projet et les solutions que nous avons apportées.</p>
+                  ${project.link ? `<a href="${project.link}" target="_blank" class="popup-link-btn">Visiter le site</a>` : ''}
               </div>
               <div class="popup-content-right">
                   <ul>
